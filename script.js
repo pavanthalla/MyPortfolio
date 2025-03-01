@@ -1,4 +1,4 @@
-/* JavaScript for Avengers-Themed Portfolio */
+/* JavaScript for Avengers-Themed for Pavan Thalla's Portfolio */
 
 // Starry Background Effect
 const canvas = document.getElementById("starsCanvas");
