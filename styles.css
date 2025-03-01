@@ -1,91 +1,95 @@
+/* Avengers-Themed Portfolio CSS */
+
+/* General styles */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #00ff00;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
     background: black;
-    height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* Matrix Background */
-#matrixCanvas {
+/* Starry background */
+#starsCanvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Keep it in the background */
-    background: black;
+    z-index: -1;
 }
 
-/* Ensure content remains readable */
-.content {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Improve readability by adding a semi-transparent background */
-section {
-    padding: 50px 20px;
-    margin: 100px auto;
-    max-width: 900px;
-    background: rgba(0, 0, 0, 0.7); /* Ensures text is readable */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.5);
-}
-
-/* Fix header positioning */
+/* Header styles */
 header {
-    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
     padding: 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.5);
-    z-index: 2;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
 }
 
-nav ul {
+h1 {
+    font-size: 2.5em;
+    color: #FFD700;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Infinity Stones Navigation */
+.infinity-stones {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.infinity-stones li {
+    margin: 10px;
 }
 
-nav ul li a {
-    color: #00ff00;
+.infinity-stones a {
     text-decoration: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
     font-weight: bold;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Stone colors */
+.reality { background: red; box-shadow: 0 0 10px red; }
+.power { background: purple; box-shadow: 0 0 10px purple; }
+.space { background: blue; box-shadow: 0 0 10px blue; }
+.mind { background: yellow; box-shadow: 0 0 10px yellow; }
+.time { background: green; box-shadow: 0 0 10px green; }
+
+.infinity-stones a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px white;
+}
+
+/* Section styles */
+section {
+    text-align: center;
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
 h2 {
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00;
-}
-
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.3);
+    color: #FFD700;
+    text-shadow: 0 0 15px #FFD700;
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.85);
-    color: #00ff00;
     text-align: center;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 1em;
 }
