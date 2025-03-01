@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const fontSize = 16;
 const columns = Math.floor(canvas.width / fontSize);
 const drops = new Array(columns).fill(1);
@@ -18,7 +18,7 @@ function drawMatrix() {
     ctx.font = `${fontSize}px monospace`;
 
     drops.forEach((y, i) => {
-        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        const text = characters.charAt(Math.floor(Math.random() * characters.length));
         ctx.fillText(text, i * fontSize, y * fontSize);
 
         if (y * fontSize > canvas.height && Math.random() > 0.975) {
