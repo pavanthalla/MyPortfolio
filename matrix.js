@@ -1,37 +1,49 @@
-const canvas = document.getElementById("matrixCanvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getElementById('matrixCanvas');
+const ctx = canvas.getContext('2d');
 
-// Set canvas size
+// Set canvas dimensions
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// Matrix characters
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 const fontSize = 16;
-const columns = Math.floor(canvas.width / fontSize);
-const drops = new Array(columns).fill(1);
+const columns = canvas.width / fontSize;
 
-function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+// Array for drop positions
+const drops = Array.from({ length: columns }, () => 1);
+
+// Draw function
+function draw() {
+    // Black background with slight opacity
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "#00ff00";
+    // Green text
+    ctx.fillStyle = '#0F0';
     ctx.font = `${fontSize}px monospace`;
 
-    drops.forEach((y, i) => {
+    // Loop over drops
+    drops.forEach((y, index) => {
         const text = letters.charAt(Math.floor(Math.random() * letters.length));
-        ctx.fillText(text, i * fontSize, y * fontSize);
+        const x = index * fontSize;
+        ctx.fillText(text, x, y * fontSize);
 
+        // Reset drop to top randomly
         if (y * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
+            drops[index] = 0;
         }
-        drops[i]++;
+
+        // Increment Y coordinate
+        drops[index]++;
     });
 }
 
-setInterval(drawMatrix, 50);
+// Interval for animation
+setInterval(draw, 50);
 
-// Adjust canvas size when window is resized
-window.addEventListener("resize", () => {
+// Adjust canvas size on window resize
+window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
