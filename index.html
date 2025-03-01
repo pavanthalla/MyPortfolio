@@ -11,70 +11,76 @@
 <body>
     <canvas id="starsCanvas"></canvas>
     <header>
-        <h1>Pavan Thalla</h1>
-        <p>Software Developer | Data Engineer | Superhero in Coding</p>
+        <h1 class="glow-text">Pavan Thalla</h1>
+        <p class="sub-glow">Software Developer | Data Engineer | Superhero in Coding</p>
         <nav>
             <ul class="infinity-stones">
-                <li><a href="#about" class="stone reality">Reality</a></li>
-                <li><a href="#experience" class="stone power">Power</a></li>
-                <li><a href="#projects" class="stone space">Space</a></li>
-                <li><a href="#skills" class="stone mind">Mind</a></li>
-                <li><a href="#contact" class="stone time">Time</a></li>
+                <li><a href="#about" class="stone about">About</a></li>
+                <li><a href="#experience" class="stone experience">Experience</a></li>
+                <li><a href="#projects" class="stone projects">Projects</a></li>
+                <li><a href="#skills" class="stone skills">Skills</a></li>
+                <li><a href="#contact" class="stone contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="hero">
-        <div class="hero-content">
+        <div class="hero-content animated-text">
             <h2>Welcome to My Avengers-Themed Universe</h2>
             <p>Innovating, Engineering, and Saving the Digital World One Line of Code at a Time.</p>
         </div>
     </section>
     
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="Pavan Thalla" class="profile-img">
-        <p>Master's student at California State University Long Beach with a passion for software development and data engineering.</p>
+        <img src="profile.jpg" alt="Pavan Thalla" class="profile-img swing-animation">
+        <p>As a recent Data Engineer at Modak, I thrived in translating complex data into actionable insights, aiding decision-making in the US Health Insurance sector. My proficiency with Microsoft Azure and StreamSets facilitated the ETL process, essential for problem-solving and data modeling support.</p>
+        <p>My academic pursuit at California State University, Long Beach, in Computer Science, complements my real-world experience. I am passionate about utilizing my technical background, including StreamSets ETL, Python, SQL, and Java, to contribute to impactful projects.</p>
     </section>
     
-    <section id="experience">
+    <section id="experience" class="fade-in">
         <h2>Experience</h2>
-        <div>
+        <div class="animated-card">
             <h3>Software Development Engineer - Modak Analytics</h3>
             <p>Developed StreamSets pipelines, optimized ETL processes, and automated environments using DataBricks, PySpark, SQL.</p>
         </div>
+        <div class="animated-card">
+            <h3>Software Development Engineer Intern - Modak Analytics</h3>
+            <p>Designed a proof-of-concept project to enhance StreamSets ETL pipelines for real-time data integration.</p>
+        </div>
     </section>
     
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
-        <div>
+        <div class="animated-card">
             <h3>Employee Attrition Prediction</h3>
             <p>Built an ML model with 90% accuracy to predict employee turnover, leveraging Python and Scikit-Learn.</p>
         </div>
-        <div>
+        <div class="animated-card">
             <h3>Intelligent Traffic Light Control System</h3>
             <p>Designed an AI-driven traffic system using OpenCV, reducing congestion by 30%.</p>
         </div>
     </section>
     
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Skills & Technologies</h2>
-        <ul>
-            <li>Java</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Spring Boot</li>
-            <li>Azure</li>
-            <li>Kafka</li>
-            <li>Machine Learning</li>
+        <ul class="skill-list">
+            <li class="glowing-skill">Java</li>
+            <li class="glowing-skill">Python</li>
+            <li class="glowing-skill">SQL</li>
+            <li class="glowing-skill">Spring Boot</li>
+            <li class="glowing-skill">StreamSets</li>
+            <li class="glowing-skill">Azure</li>
+            <li class="glowing-skill">Kafka</li>
+            <li class="glowing-skill">Machine Learning</li>
         </ul>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:pavan.thalla.ms@gmail.com">pavan.thalla.ms@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/pavan-thalla-9b6759193/">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/pavanthalla">GitHub Profile</a></p>
+        <p>Email: <a href="mailto:pavan.thalla.ms@gmail.com" class="glowing-link">pavan.thalla.ms@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/pavan-thalla-9b6759193/" class="glowing-link">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/pavanthalla" class="glowing-link">GitHub Profile</a></p>
     </section>
     
     <footer>
