@@ -1,13 +1,4 @@
-/* Avengers-Themed Portfolio CSS */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    color: #ffffff;
-    background: black;
-    overflow-x: hidden;
-}
-
+/* Starry background */
 #starsCanvas {
     position: fixed;
     top: 0;
@@ -17,45 +8,16 @@ body, html {
     z-index: -1;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
-}
-
-h1.glow-text {
-    font-size: 2.5em;
-    color: #FFD700;
-    text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
-}
-
-.sub-glow {
-    font-size: 1.2em;
-    text-shadow: 0 0 10px #FFD700;
-}
-
-.infinity-stones {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    list-style: none;
-}
-
-.infinity-stones a {
-    text-decoration: none;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 50%;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+/* Section background colors */
+.soul-bg { background: linear-gradient(45deg, #ff8000, #ff5500); }
+.power-bg { background: linear-gradient(45deg, #800080, #9900ff); }
+.space-bg { background: linear-gradient(45deg, #0011ff, #00aaff); }
+.mind-bg { background: linear-gradient(45deg, #ffff00, #ffcc00); }
+.time-bg { background: linear-gradient(45deg, #00ff00, #33cc33); }
 
 section {
     text-align: center;
-    padding: 50px;
-    margin: 50px auto;
-    max-width: 900px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    padding: 100px 20px;
+    height: 100vh;
+    color: white;
 }
