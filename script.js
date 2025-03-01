@@ -1,13 +1,10 @@
-/* JavaScript for Avengers-Themed for Pavan Thalla's Portfolio */
-
-// Starry Background Effect
 const canvas = document.getElementById("starsCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const stars = [];
-const numStars = 100;
+const numStars = 150;
 
 for (let i = 0; i < numStars; i++) {
     stars.push({
@@ -28,19 +25,4 @@ function drawStars() {
     });
 }
 
-function animateStars() {
-    stars.forEach(star => {
-        star.y += star.speed;
-        if (star.y > canvas.height) star.y = 0;
-    });
-    drawStars();
-    requestAnimationFrame(animateStars);
-}
-
 animateStars();
-
-// Resize canvas dynamically
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
