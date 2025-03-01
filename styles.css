@@ -1,3 +1,11 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    background: black;
+    overflow-x: hidden;
+}
 
 #starsCanvas {
     position: fixed;
@@ -8,14 +16,13 @@
     z-index: -1;
 }
 
-/* Section background colors */
 .soul-bg { background: linear-gradient(45deg, #ff8000, #ff5500); }
 .power-bg { background: linear-gradient(45deg, #800080, #9900ff); }
 .space-bg { background: linear-gradient(45deg, #0011ff, #00aaff); }
 .mind-bg { background: linear-gradient(45deg, #ffff00, #ffcc00); }
 .time-bg { background: linear-gradient(45deg, #00ff00, #33cc33); }
 
-section {
+.section {
     text-align: center;
     padding: 100px 20px;
     height: 100vh;
