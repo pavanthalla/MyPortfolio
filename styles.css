@@ -23,6 +23,15 @@ body, html {
     padding: 20px;
 }
 
+/* Added semi-transparent background to improve readability */
+section {
+    padding: 50px 20px;
+    margin: 100px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Ensures better text visibility */
+}
+
 header {
     background: rgba(0, 0, 0, 0.85);
     padding: 20px;
@@ -47,13 +56,6 @@ nav ul li a {
     color: #00ff00;
     text-decoration: none;
     font-weight: bold;
-}
-
-section {
-    padding: 50px 20px;
-    margin: 100px auto;
-    max-width: 900px;
-    border-radius: 10px;
 }
 
 h2 {
