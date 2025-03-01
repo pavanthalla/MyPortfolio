@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const stars = [];
-const numStars = 200;
+const numStars = 250;
 
 for (let i = 0; i < numStars; i++) {
     stars.push({
@@ -28,7 +28,10 @@ function drawStars() {
 function animateStars() {
     stars.forEach(star => {
         star.y += star.speed;
-        if (star.y > canvas.height) star.y = 0;
+        if (star.y > canvas.height) {
+            star.y = 0;
+            star.x = Math.random() * canvas.width;
+        }
     });
     drawStars();
     requestAnimationFrame(animateStars);
@@ -36,7 +39,6 @@ function animateStars() {
 
 animateStars();
 
-// Smooth scrolling for navigation
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", event => {
         event.preventDefault();
