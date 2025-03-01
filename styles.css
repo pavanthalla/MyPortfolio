@@ -1,7 +1,4 @@
 /* Avengers-Themed Portfolio CSS */
-
-
-/* General styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -11,7 +8,6 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Starry background */
 #starsCanvas {
     position: fixed;
     top: 0;
@@ -21,7 +17,6 @@ body, html {
     z-index: -1;
 }
 
-/* Header styles */
 header {
     text-align: center;
     padding: 20px;
@@ -29,25 +24,22 @@ header {
     box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
 }
 
-h1 {
+h1.glow-text {
     font-size: 2.5em;
     color: #FFD700;
+    text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
 }
 
-p {
+.sub-glow {
     font-size: 1.2em;
+    text-shadow: 0 0 10px #FFD700;
 }
 
-/* Infinity Stones Navigation */
 .infinity-stones {
     display: flex;
     justify-content: center;
     padding: 10px;
     list-style: none;
-}
-
-.infinity-stones li {
-    margin: 10px;
 }
 
 .infinity-stones a {
@@ -59,19 +51,6 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Stone colors */
-.reality { background: red; box-shadow: 0 0 10px red; }
-.power { background: purple; box-shadow: 0 0 10px purple; }
-.space { background: blue; box-shadow: 0 0 10px blue; }
-.mind { background: yellow; box-shadow: 0 0 10px yellow; }
-.time { background: green; box-shadow: 0 0 10px green; }
-
-.infinity-stones a:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 20px white;
-}
-
-/* Section styles */
 section {
     text-align: center;
     padding: 50px;
@@ -79,19 +58,4 @@ section {
     max-width: 900px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
-
-h2 {
-    color: #FFD700;
-    text-shadow: 0 0 15px #FFD700;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    font-size: 1em;
-}
-
