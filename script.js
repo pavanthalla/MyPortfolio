@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const stars = [];
-const numStars = 150;
+const numStars = 200;
 
 for (let i = 0; i < numStars; i++) {
     stars.push({
@@ -25,4 +25,21 @@ function drawStars() {
     });
 }
 
+function animateStars() {
+    stars.forEach(star => {
+        star.y += star.speed;
+        if (star.y > canvas.height) star.y = 0;
+    });
+    drawStars();
+    requestAnimationFrame(animateStars);
+}
+
 animateStars();
+
+// Smooth scrolling for navigation
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault();
+        document.querySelector(link.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+    });
+});
